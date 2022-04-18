@@ -771,6 +771,3 @@ h3 {
   visibility: visible;
 }
 
-.progress-bar > span:nth-of-type {
-  border-top: 1px solid red;
-}
