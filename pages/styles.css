@@ -14,6 +14,9 @@
   --font-size-sm: 1em;
   --font-montserrat: "Montserrat", sans-serif;
   --font-piazzola: "Piazzolla", serif;
+  --bg: #545b7a;
+  --c1: #fa0;
+  --c2: #0af;
 }
 
 * {
@@ -406,7 +409,7 @@ section {
 }
 
 .balance__item:nth-child(6) div {
-  color: var(--light) !important;
+  color: var(--light);
 }
 
 .balance__detail .balance__item:nth-child(1) + .text {
@@ -463,7 +466,8 @@ h3 {
   color: var(--medium-light);
 }
 
-.transactions__header > *,  .transactions__header p {
+.transactions__header > *,
+.transactions__header p {
   flex: 1 1 0;
 }
 
@@ -476,9 +480,8 @@ h3 {
 }
 
 .transactions__header svg {
-    text-align: right;
-    align-self: right;
-  /* margin-inline-start: 1em; */
+  text-align: right;
+  align-self: right;
 }
 
 .transactions__item {
@@ -531,13 +534,12 @@ h3 {
 }
 
 .position > * {
-    flex: 1 1 2
+  flex: 1 1 2;
 }
 
 .position__donutchart > div {
-    text-align: center;
+  text-align: center;
 }
-
 
 .progressbar__item {
   display: flex;

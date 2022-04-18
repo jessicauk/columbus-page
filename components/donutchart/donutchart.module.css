@@ -1,88 +1,60 @@
-:root{
-    --pi: 3.14159265359;
-    --a1: 60;
-    --a2: 25;
-    --a3: 10;
-    --a4: 5;
+.position__donutchart {
+  position: absolute;
 }
-.container {
-    width: 800px;
-    height: 800px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.donut {
+  width: 200px;
+  height: 200px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+  background: var(--secondary)
+    linear-gradient(to right, var(--dark) 40%, var(--secondary) 20%);
+  color: var(--secondary);
+  border-radius: 50%;
+  transform: rotate(265deg);
+}
+@keyframes spin {
+  to {
+    transform: rotate(70deg);
   }
-  
-  p {
-    position: absolute;
-    font-size: 80px;
-    font-weight: 800;
-    color: white;
+}
+@keyframes background {
+  70% {
+    background-color: currentColor;
   }
-  
-  svg {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @keyframes percent1 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a1) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a1) / 100));
-    }
-  }
-  
-  @keyframes percent2 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a2) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a2) / 100));
-    }
-  }
-  
-  @keyframes percent3 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a3) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a3) / 100));
-    }
-  }
-  
-  @keyframes percent4 {
-    to {
-      stroke-dasharray: calc(2 * var(--pi) * 300 * var(--a4) / 100) calc(2 * var(--pi) * 300 * calc(1 - var(--a4) / 100));
-    }
-  }
-  
-  .donut {
-    transform-origin: center center;
-    transition: 0.5s ease-in-out;
-    stroke-dashoffset: 0;
-    cursor: pointer;
-  }
-  
-  .donut:nth-child(1) {
-    transform: rotateZ(-90deg);
-    animation: percent1 1s ease-in-out forwards;
-  }
-  
-  .donut:nth-child(2) {
-    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100)));
-    animation: percent2 1s ease-in-out forwards;
-  }
-  
-  .donut:nth-child(3) {
-    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(va
-  r(--a2) * 360deg / 100)));
-    animation: percent3 1s ease-in-out forwards;
-  }
-  
-  .donut:nth-child(4) {
-    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100)));
-    animation: percent4 1s ease-in-out forwards;
-  }
-  
-  .donut:hover {
-    stroke-width: 100;
-  }
-  
-  
+}
+
+.donut::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: var(--light);
+  border-radius: 50%;
+}
+
+.donut::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: inherit;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 100% 100% 0 / 50%;
+  transform: rotate(40deg);
+  transform-origin: 0 50%;
+  animation: 50s spin infinite linear, 100s background infinite step-end;
+  animation-play-state: paused;
+  animation-delay: inherit;
+}

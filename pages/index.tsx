@@ -138,7 +138,7 @@ function Index() {
               <div className="card performance">
                 <div className="performance__chart">
                   <h2 className="headline3">Últimos seis meses</h2>
-                  {/* <ColumnChart /> */}
+                  <ColumnChart />
                 </div>
                 <div className="performance__amount">
                   <div>
@@ -209,7 +209,7 @@ function Index() {
               <div className="card position">
                 <div className="position__donutchart">
                   <h2 className="headline3">No. Cuenta 123456</h2>
-                  {/* <DonutChart /> */}
+                  <DonutChart />
                   <div>
                     <p className="headline4">Valor total:</p>
                     <p>$1,456.00 MXN</p>
