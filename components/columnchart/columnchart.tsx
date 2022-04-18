@@ -12,7 +12,7 @@ export default function ColumnChart() {
             <div className="progress-fill">
             </div>
           </div>
-          <span>Jun</span>
+          <span className="small">Jun</span>
           
         </div>
 
@@ -24,7 +24,7 @@ export default function ColumnChart() {
             <div className="progress-fill">
             </div>
           </div>
-          <span>Jul</span>
+          <span className="small">Jul</span>
         </div>
 
         <div className="progress-bar">
@@ -35,7 +35,7 @@ export default function ColumnChart() {
             <div className="progress-fill">
             </div>
           </div>
-          <span>Ago</span>
+          <span className="small">Ago</span>
         </div>
 
         <div className="progress-bar">
@@ -46,7 +46,7 @@ export default function ColumnChart() {
             <div className="progress-fill">
             </div>
           </div>
-          <span>Sep</span>
+          <span className="small">Sep</span>
         </div>
 
         <div className="progress-bar">
@@ -57,7 +57,7 @@ export default function ColumnChart() {
             <div className="progress-fill">
             </div>
           </div>
-          <span>Oct</span>
+          <span className="small">Oct</span>
         </div>
 
         <div className="progress-bar">
@@ -68,7 +68,7 @@ export default function ColumnChart() {
             <div className="progress-fill">
             </div>
           </div>
-          <span>Nov</span>
+          <span className="small">Nov</span>
         </div>
       </div>
     </div>

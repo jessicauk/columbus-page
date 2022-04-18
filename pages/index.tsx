@@ -1,6 +1,7 @@
 import Head from "next/head";
 import ColumnChart from "../components/columnchart/columnchart";
 import DonutChart from "../components/donutchart/donutchart";
+
 import {
   faEllipsis,
   faAngleLeft,
@@ -14,6 +15,14 @@ import {
   faPlus,
   faMinus,
   faForwardFast,
+  faForward,
+  faClockRotateLeft,
+  faMagnifyingGlass,
+  faGlobe,
+  faGripVertical,
+  faSquare,
+  faBars,
+  faXmark
 } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 
@@ -24,6 +33,7 @@ function Index() {
     <>
       <Head>
         <title>Columbus page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -35,6 +45,10 @@ function Index() {
         <div className="container">
           <nav className="header">
             <div className="header__left">
+            <div className="header__responsive">
+
+<FontAwesomeIcon icon={faBars} />
+</div>
               <h1 className="header__navigation headline1">
                 Principal<span>Mi inversión</span>
               </h1>
@@ -51,10 +65,14 @@ function Index() {
             </div>
           </nav>
           <div className="sidebar">
+          <div className="sidebar__responsive">
+
+                  <FontAwesomeIcon icon={faXmark} />
+          </div>
             <img src="" alt="" />
             <ul className="sidebar__list">
               <li>
-                <FontAwesomeIcon icon={faThLarge} />
+                <FontAwesomeIcon icon={faGripVertical} />
               </li>
               <li>
                 <FontAwesomeIcon icon={faSquarePlus} />
@@ -87,7 +105,6 @@ function Index() {
               <h1 className="headline2">Saldo en cuenta</h1>
               <div className="card balance">
                 <div className="balance__header">
-                  {/* <img src="" alt="" /> */}
                   <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faPlus} />
                     </div>
@@ -195,7 +212,7 @@ function Index() {
                   </div>
                   <div className="transactions__item">
                     <button className="icon--rounded icon--transfer">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faForward} />
                     </button>
                     <p className="text">Transpaso</p>
                     <p className="small">Martes, 13 de Julio de 2021</p>
@@ -247,7 +264,7 @@ function Index() {
                 <ul className="card actions__list">
                   <li className="actions__item">    
                     <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faForward} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Solicitar transpasos</p>
@@ -256,7 +273,7 @@ function Index() {
                   </li>
                   <li className="actions__item">    
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faMinus} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Solicitar retiros</p>
@@ -265,7 +282,7 @@ function Index() {
                   </li>
                   <li className="actions__item">    
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faPlus} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Realiza aportaciones</p>
@@ -279,16 +296,16 @@ function Index() {
                 <ul className="card actions__list">
                   <li className="actions__item">    
                     <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faClockRotateLeft} />
                     </div>
                     <div className="actions__title">
-                      <p className="text">Solicitudes endientes</p>
+                      <p className="text">Solicitudes Pendientes</p>
                       <p className="small">Consulta los movimientos Pendientes</p>
                     </div> 
                   </li>
                   <li className="actions__item">    
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Aclaraciones</p>
@@ -297,7 +314,7 @@ function Index() {
                   </li>
                   <li className="actions__item">    
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faSquare} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Detalles de mi Póliza</p>
@@ -311,7 +328,7 @@ function Index() {
                 <ul className="card actions__list">
                   <li className="actions__item">    
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faGlobe} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Portal</p>
@@ -320,7 +337,7 @@ function Index() {
                   </li>
                   <li className="actions__item">    
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faForwardFast} />
+                      <FontAwesomeIcon icon={faUser} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Beneficiarios</p>

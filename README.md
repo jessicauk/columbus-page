@@ -29,19 +29,19 @@ $ yarn install
 
 1. Clone project on your local machine.
 2. Install [yarn]() dependencies from package.json file. Please guarantee you are located inside _columbus-page_ folder.
-3. Run next dev start to start Next js app.
+3. Run yarn dev start to start Next.js app.
 
 Before run project make sure any port doesn't runs at 3000 port.
 
 | localhost        | Port | Config Folder      |
 | ---------------- | ---- | ---------------- |
-| Next js      | 3000 | .next |
+| Next.js      | 3000 | .next |
 
 If you want to change this ports is recommended you change them in their config files.
 
 
 ```bash
-$ next dev
+$ yarn dev
 ```
 
 ## Documentation

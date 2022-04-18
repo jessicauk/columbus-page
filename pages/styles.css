@@ -118,6 +118,42 @@ body {
   color: var(--dark);
 }
 
+.header__left {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.header__left > * {
+  flex: 1 1 0;
+}
+
+@media (max-width: 500px) {
+    .main {
+        margin: 0 auto;
+        padding: 2.5em 1em
+    }
+  .header__navigation {
+    font-size: 0.8em;
+    flex-direction: column;
+    align-self: left;
+    margin: 0;
+    padding-inline-start: 0;
+  }
+
+  .sidebar,
+  .header__date {
+    display: none;
+  }
+
+  .button {
+      font-size: 1em;
+      padding: 0.5em;
+      margin: 0.5em;
+  }
+}
+
 .header__navigation {
   margin-inline-start: 3.5em;
   text-transform: uppercase;
@@ -433,6 +469,9 @@ section {
   flex-flow: column nowrap;
   flex: 1;
   margin-block: 2em;
+  margin-inline: 2em;
+  padding-inline-start: 1em;
+  border-left: 1px solid var(--gray);
 }
 
 .performance__amount > div,
@@ -684,10 +723,6 @@ h3 {
   font-size: 1em;
 }
 
-.barchart {
-  border-right: 1px solid var(--gray);
-}
-
 .barchart__container {
   width: 100%;
   background: var(--light);
@@ -698,7 +733,7 @@ h3 {
 }
 
 .barchart__container > * {
-    flex: 1 1 0
+  flex: 1 1 0;
 }
 
 .rounded .progress-track,
@@ -712,7 +747,7 @@ h3 {
 .vertical .progress-bar {
   display: flex;
   flex-flow: row wrap;
-  height: 5em;
+  height: 8em;
   width: 2em;
   margin-right: 1.5em;
 }
@@ -770,4 +805,3 @@ h3 {
 .vertical .progress-bar:hover .tooltiptext {
   visibility: visible;
 }
-
