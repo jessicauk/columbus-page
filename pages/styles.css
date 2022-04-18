@@ -534,7 +534,7 @@ h3 {
 }
 
 .position > * {
-  flex: 1 1 2;
+  flex: 1 2 0;
 }
 
 .position__donutchart > div {
@@ -682,4 +682,95 @@ h3 {
 
 .actions__title p:nth-of-type(2) {
   font-size: 1em;
+}
+
+.barchart {
+  border-right: 1px solid var(--gray);
+}
+
+.barchart__container {
+  width: 100%;
+  background: var(--light);
+  padding-block: 2.5em;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.barchart__container > * {
+    flex: 1 1 0
+}
+
+.rounded .progress-track,
+.rounded .progress-fill {
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px rgba(8, 7, 7, 0.2);
+}
+
+/* Vertical */
+
+.vertical .progress-bar {
+  display: flex;
+  flex-flow: row wrap;
+  height: 5em;
+  width: 2em;
+  margin-right: 1.5em;
+}
+
+.vertical .progress-track {
+  position: relative;
+  width: 40px;
+  height: 100%;
+  background: var(--dark);
+}
+
+.vertical .progress-track:hover {
+  display: block;
+}
+
+.vertical .progress-fill {
+  position: relative;
+  background: var(--secondary);
+  height: 5%;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.rounded .progress-track,
+.rounded .progress-fill {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  box-shadow: var(--shadow-1);
+  width: 10em;
+  color: var(--secondary);
+  background-color: #fff;
+  text-align: center;
+  padding: 0.5em 0;
+  border-radius: 6px;
+  position: absolute;
+  top: -20px;
+  z-index: 1;
+}
+
+.vertical .progress-bar:hover .tooltiptext {
+  visibility: visible;
+}
+
+.progress-bar > span:nth-of-type {
+  border-top: 1px solid red;
 }

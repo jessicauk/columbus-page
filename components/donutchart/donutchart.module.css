@@ -1,5 +1,6 @@
 .position__donutchart {
   position: absolute;
+  margin-inline-end: 2em;
 }
 
 .donut {
