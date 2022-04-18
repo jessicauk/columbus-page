@@ -130,16 +130,9 @@ body {
 }
 
 @media (max-width: 500px) {
-    .main {
-        margin: 0 auto;
-        padding: 2.5em 1em
-    }
-  .header__navigation {
-    font-size: 0.8em;
-    flex-direction: column;
-    align-self: left;
-    margin: 0;
-    padding-inline-start: 0;
+  .sidebar .sidebar__responsive .fa-bars, 
+  .header__left .header__responsive svg{
+    display: none;
   }
 
   .sidebar,
@@ -148,9 +141,9 @@ body {
   }
 
   .button {
-      font-size: 1em;
-      padding: 0.5em;
-      margin: 0.5em;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.5em;
   }
 }
 

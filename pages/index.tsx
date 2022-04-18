@@ -22,7 +22,7 @@ import {
   faGripVertical,
   faSquare,
   faBars,
-  faXmark
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 
@@ -45,10 +45,9 @@ function Index() {
         <div className="container">
           <nav className="header">
             <div className="header__left">
-            <div className="header__responsive">
-
-<FontAwesomeIcon icon={faBars} />
-</div>
+              <div className="header__responsive">
+                {/* <FontAwesomeIcon icon={faBars} /> */}
+              </div>
               <h1 className="header__navigation headline1">
                 Principal<span>Mi inversión</span>
               </h1>
@@ -65,10 +64,9 @@ function Index() {
             </div>
           </nav>
           <div className="sidebar">
-          <div className="sidebar__responsive">
-
-                  <FontAwesomeIcon icon={faXmark} />
-          </div>
+            <div className="sidebar__responsive">
+              {/* <FontAwesomeIcon icon={faXmark} /> */}
+            </div>
             <img src="" alt="" />
             <ul className="sidebar__list">
               <li>
@@ -106,8 +104,8 @@ function Index() {
               <div className="card balance">
                 <div className="balance__header">
                   <div className="icon--rounded background--blue">
-                      <FontAwesomeIcon icon={faPlus} />
-                    </div>
+                    <FontAwesomeIcon icon={faPlus} />
+                  </div>
                   <div className="balance__account">
                     <h2 className="headline3">Cuenta principal</h2>
                     <p>
@@ -131,11 +129,15 @@ function Index() {
                   </div>
                   <div className="balance__item">
                     <div className="balance__type headline4">Aportación</div>
-                    <div className="balance__value text-light">$1,456.00 MXN</div>
+                    <div className="balance__value text-light">
+                      $1,456.00 MXN
+                    </div>
                   </div>
                   <div className="balance__item">
                     <div className="balance__type headline4">Nombre</div>
-                    <div className="balance__value text-light">Joseph Antonie D.</div>
+                    <div className="balance__value text-light">
+                      Joseph Antonie D.
+                    </div>
                   </div>
                   <div className="balance__item">
                     <div className="balance__type headline4">No Cuenta</div>
@@ -234,10 +236,8 @@ function Index() {
                 </div>
                 <div className="position__progressbar">
                   <div className="progressbar__item">
-                  <div className="circle" />
-                    <p className="text">
-                      Balanceado Pesos Inicial (MXN) 
-                    </p>
+                    <div className="circle" />
+                    <p className="text">Balanceado Pesos Inicial (MXN)</p>
                     <span className="text">6%</span>
                     <p className="small">$3,456.00 MXN</p>
                     <div className="progressbar__container">
@@ -246,9 +246,7 @@ function Index() {
                   </div>
                   <div className="progressbar__item">
                     <div className="circle" />
-                    <p className="text">
-                      Balanceado Dólares Inicial (USD)
-                    </p>
+                    <p className="text">Balanceado Dólares Inicial (USD)</p>
                     <span className="text">22%</span>
                     <p className="small">$12,345.67 MXN (234,56 USD)</p>
                     <div className="progressbar__container">
@@ -262,87 +260,103 @@ function Index() {
               <div className="actions">
                 <h1 className="headline2">Solicitudes</h1>
                 <ul className="card actions__list">
-                  <li className="actions__item">    
+                  <li className="actions__item">
                     <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faForward} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Solicitar transpasos</p>
-                      <p className="small">Traspasa fondos entre alternativas de inversión</p>
-                    </div> 
+                      <p className="small">
+                        Traspasa fondos entre alternativas de inversión
+                      </p>
+                    </div>
                   </li>
-                  <li className="actions__item">    
-                  <div className="icon--rounded background--blue">
+                  <li className="actions__item">
+                    <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faMinus} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Solicitar retiros</p>
-                      <p className="small">Programa retiros totales o parciales</p>
-                    </div> 
+                      <p className="small">
+                        Programa retiros totales o parciales
+                      </p>
+                    </div>
                   </li>
-                  <li className="actions__item">    
-                  <div className="icon--rounded background--blue">
+                  <li className="actions__item">
+                    <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faPlus} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Realiza aportaciones</p>
-                      <p className="small">Programa depósitos o aportaciones recurrentes</p>
-                    </div> 
+                      <p className="small">
+                        Programa depósitos o aportaciones recurrentes
+                      </p>
+                    </div>
                   </li>
                 </ul>
               </div>
               <div className="actions">
                 <h1 className="headline2">Consultas</h1>
                 <ul className="card actions__list">
-                  <li className="actions__item">    
+                  <li className="actions__item">
                     <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faClockRotateLeft} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Solicitudes Pendientes</p>
-                      <p className="small">Consulta los movimientos Pendientes</p>
-                    </div> 
+                      <p className="small">
+                        Consulta los movimientos Pendientes
+                      </p>
+                    </div>
                   </li>
-                  <li className="actions__item">    
-                  <div className="icon--rounded background--blue">
+                  <li className="actions__item">
+                    <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Aclaraciones</p>
-                      <p className="small">Tienes aclaraciones sin resolver, consulta</p>
-                    </div> 
+                      <p className="small">
+                        Tienes aclaraciones sin resolver, consulta
+                      </p>
+                    </div>
                   </li>
-                  <li className="actions__item">    
-                  <div className="icon--rounded background--blue">
+                  <li className="actions__item">
+                    <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faSquare} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Detalles de mi Póliza</p>
-                      <p className="small">Consulta los detalles y documentos de tu póliza</p>
-                    </div> 
+                      <p className="small">
+                        Consulta los detalles y documentos de tu póliza
+                      </p>
+                    </div>
                   </li>
                 </ul>
               </div>
               <div className="actions">
                 <h1 className="headline2">Información</h1>
                 <ul className="card actions__list">
-                  <li className="actions__item">    
-                  <div className="icon--rounded background--blue">
+                  <li className="actions__item">
+                    <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faGlobe} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Portal</p>
-                      <p className="small">Accede al portal desde tu navegador web</p>
-                    </div> 
+                      <p className="small">
+                        Accede al portal desde tu navegador web
+                      </p>
+                    </div>
                   </li>
-                  <li className="actions__item">    
-                  <div className="icon--rounded background--blue">
+                  <li className="actions__item">
+                    <div className="icon--rounded background--blue">
                       <FontAwesomeIcon icon={faUser} />
                     </div>
                     <div className="actions__title">
                       <p className="text">Beneficiarios</p>
-                      <p className="small">Consulta la lista de beneficiarios registrados</p>
-                    </div> 
+                      <p className="small">
+                        Consulta la lista de beneficiarios registrados
+                      </p>
+                    </div>
                   </li>
                 </ul>
               </div>
