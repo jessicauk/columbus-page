@@ -126,24 +126,21 @@ body {
 }
 
 .header__left > * {
-  flex: 1 1 0;
+  flex: 1 2 1;
 }
 
-@media (max-width: 500px) {
-  .sidebar .sidebar__responsive .fa-bars, 
-  .header__left .header__responsive svg{
-    display: none;
+@media screen and (max-width: 500px) {
+  .header__navigation {
+    font-size: 0.8em;
+    flex-direction: column;
+    align-self: left;
+    margin-inline-start: 1em;
+    padding-inline-start: 0;
   }
 
   .sidebar,
   .header__date {
     display: none;
-  }
-
-  .button {
-    font-size: 1em;
-    padding: 0.5em;
-    margin: 0.5em;
   }
 }
 
